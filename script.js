@@ -1,14 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const hamburgerButton = document.getElementById("hamburgerButton");
-    const mobileMenu = document.getElementById("mobileMenu");
+    const toggler = document.querySelector("#hamburgerButton");
+    const collapse = document.querySelector("#navbarNav");
 
-    if (hamburgerButton && mobileMenu) {
-        hamburgerButton.addEventListener("click", function () {
-            if (mobileMenu.style.display === "block") {
-                mobileMenu.style.display = "none";
-            } else {
-                mobileMenu.style.display = "block";
-            }
-        });
-    }
+    toggler.addEventListener("click", function () {
+        collapse.classList.toggle("show");
+        toggler.classList.toggle("collapsed");
+    });
 });
