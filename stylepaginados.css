@@ -1,11 +1,12 @@
-/* Ajuste del contenedor del video */
+/* VIDEO */
+
+
 .video-wrapper {
-  margin: 50px; /* Márgenes alrededor del video */
-  height: 500px; /* Altura ajustada del contenedor */
+  margin: 50px; 
+  height: 500px; 
   position: relative;
 }
 
-/* Contenedor del video */
 .video-container {
   width: 100%;
   height: 100%;
@@ -13,62 +14,43 @@
   position: relative;
 }
 
-/* Video */
 .video-container video {
   position: absolute;
-  top: -10%; /* Recorta la parte superior del video */
+  top: -10%; 
   left: 0;
   width: 100%;
-  height: 120%; /* Extiende la altura para recortar posibles barras negras */
-  object-fit: cover; /* Asegura que el video llene el espacio */
+  height: 120%; 
+  object-fit: cover; 
 }
 
 
-
-/* Contenido sobre el video */
 .header-content {
-  z-index: 2; /* Asegura que el contenido esté encima del cuadrado negro */
+  z-index: 2;
   text-align: center;
 }
 
 /* TIRA ILUSTRACIONES */
 
 .illustration-row {
-  height: 10px; /* Altura más pequeña para toda la tira */
-  padding: 0; /* Elimina el margen interno */
-  margin: 0; /* Elimina el margen externo */
+  height: 10px;
+  padding: 0;
+  margin: 0;
 }
 
 .illustration-row img {
-  height: 100%; /* Las imágenes ocupan el 100% de la altura de la tira */
-  object-fit: contain; /* Mantiene las proporciones de las imágenes */
+  height: 100%;
+  object-fit: contain;
 }
 
 .illustration-row::-webkit-scrollbar {
-  display: none; /* Oculta la barra de desplazamiento horizontal */
+  display: none;
 }
 
 
 
 /* GALERIA */
 
-
-body {
-  background-color: #f8f9fa; /* Fondo claro */
-}
-
-h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #333;
-}
-
 img {
-  object-fit: cover; /* Garantiza que las imágenes se adapten sin deformarse */
-  transition: transform 0.3s ease;
+  border-radius: 5px; 
 }
 
-img:hover {
-  transform: scale(1.03); /* Zoom ligero al pasar el ratón */
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra ligera */
-}
