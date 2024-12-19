@@ -158,6 +158,7 @@ p.lead {
     opacity: 1; /* Asegura que el ícono sea completamente visible */
 }
 
+
 /* Mantener color al pasar el mouse */
 .carousel-control-prev-icon:hover,
 .carousel-control-next-icon:hover {
