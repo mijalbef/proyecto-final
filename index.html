@@ -53,32 +53,51 @@
         </p>
     </div>
 
-    <!-- Carrusel -->
-    <div id="artCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="IMG/obracarrousel1.webp" class="d-block w-50 mx-auto" alt="Arte 1">
-            </div>
-            <div class="carousel-item">
-                <img src="IMG/obracarrousel2.webp" class="d-block w-50 mx-auto" alt="Arte 2">
-            </div>
-            <div class="carousel-item">
-                <img src="IMG/obracarrousel3.webp" class="d-block w-50 mx-auto" alt="Arte 3">
+   <!-- Carousel -->
+<div id="artworkCarousel" class="carousel slide mx-auto mt-5 p-3 border rounded" data-bs-ride="carousel" style="max-width: 90%;">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="IMG/obracarrousel1.webp" class="d-block w-100 border-image rounded" alt="Artwork 1-1" data-bs-toggle="modal" data-bs-target="#modal1">
+                </div>
+                <div class="col-md-4">
+                    <img src="IMG/obracarrousel2.webp" class="d-block w-100 border-image rounded" alt="Artwork 1-2" data-bs-toggle="modal" data-bs-target="#modal2">
+                </div>
+                <div class="col-md-4">
+                    <img src="IMG/obracarrousel3.webp" class="d-block w-100 border-image rounded" alt="Artwork 1-3" data-bs-toggle="modal" data-bs-target="#modal3">
+                </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#artCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#artCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="IMG/ONCE-IN-A-BLUE-MOON/artwork-110-1.webp" class="d-block w-100 border-image rounded" alt="Artwork 2-1" data-bs-toggle="modal" data-bs-target="#modal4">
+                </div>
+                <div class="col-md-4">
+                    <img src="IMG/ONCE-IN-A-BLUE-MOON/artwork-111-1.webp" class="d-block w-100 border-image rounded" alt="Artwork 2-2" data-bs-toggle="modal" data-bs-target="#modal5">
+                </div>
+                <div class="col-md-4">
+                    <img src="IMG/ONCE-IN-A-BLUE-MOON/artwork-112-1.webp" class="d-block w-100 border-image rounded" alt="Artwork 2-3" data-bs-toggle="modal" data-bs-target="#modal6">
+                </div>
+            </div>
+        </div>
     </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#artworkCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#artworkCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p>Desarrollado con ❤ por ti</p>
+    
     </footer>
 
     <!-- Bootstrap JS -->

@@ -146,7 +146,7 @@ h1 span {
 p.lead {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: #555;
+    color: #000000;
 }
 
 /* Cambiar color de los íconos del botón de navegación del carrusel */
@@ -163,5 +163,35 @@ p.lead {
 .carousel-control-prev-icon:hover,
 .carousel-control-next-icon:hover {
     background-color: #ffc107; /* Se mantiene negro al pasar el mouse */
+}
+
+
+/* CARROUSEL */
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-body{
+    padding: 0;
+}
+
+/* Bordes redondeados para las imágenes del carrusel */
+.border-image {
+    border-radius: 15px; /* Redondea las esquinas de las imágenes */
+}
+.border {
+    border: none !important;
+}
+/* Ajustar márgenes */
+.carousel-container {
+    margin: 0 auto; /* Centrar el carrusel */
+    max-width: 90%; /* Limitar el ancho máximo */
+}
+
+/* Eliminar bordes alrededor de las imágenes */
+.carousel-inner img {
+    border: none; /* Elimina cualquier borde */
+    box-shadow: none; /* Elimina cualquier sombra */
+    outline: none; /* Asegura que no haya contornos visibles */
 }
 
