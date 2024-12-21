@@ -102,6 +102,8 @@ body {
 
 .mt-5 {
     margin-top: 15rem !important;
+    margin-bottom: 15rem !important;
+
 }
 
 /* Tipografía principal */
@@ -221,6 +223,9 @@ h2 {
 .carousel-container {
     margin: 0 auto;
     max-width: 90%;
+}
+.carrusel {
+    background-color: #ffc107;
 }
 
 /* Eliminar bordes alrededor de las imágenes */
