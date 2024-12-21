@@ -4,6 +4,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     toggler.addEventListener("click", function () {
         collapse.classList.toggle("show");
-        toggler.classList.toggle("collapsed");
     });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const options = {
+        strings: ["FRESH FRAMES", "TUS NUEVOS", "ARTISTAS FAVORITOS"],
+        typeSpeed: 70, // Reduce la velocidad de tipeo para que sea más suave
+        backSpeed: 40, // Velocidad al borrar (no se usa aquí pero es un ajuste general)
+        backDelay: 500, // Retraso entre cada palabra
+        startDelay: 1000, // Retraso inicial de 1 segundo
+        loop: false, // No repetir la animación
+        showCursor: true, // Mostrar el cursor durante el efecto
+        cursorChar: "|", // Caracter del cursor (opcional)
+        onComplete: () => {
+            // Mantener el texto completo visible
+            document.getElementById("typed-text").innerHTML = `
+                <span style="font-family: 'Permanent Marker', cursive;">FRESH FRAMES</span><br>
+                <span style="font-family: 'Montserrat', sans-serif;">TUS NUEVOS</span><br>
+                <span style="font-family: 'Montserrat', sans-serif;">ARTISTAS FAVORITOS</span>
+            `;
+        }
+    };
+
+    // Inicia Typed.js
+    setTimeout(() => {
+        new Typed("#typed-text", options);
+    }, 500); // Retraso adicional para mejorar la transición
 });
