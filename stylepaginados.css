@@ -22,3 +22,12 @@
 .header-content {
   z-index: 1; /* Se coloca encima del video */
 }
+
+/* FOOTER */
+.hover-icon:hover {
+  color: #f1b832 !important;
+}
+
+.hover-icon {
+  transition: color 0.3s ease-in-out;
+}
