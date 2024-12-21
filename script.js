@@ -32,3 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
         new Typed("#typed-text", options);
     }, 500); // Retraso adicional para mejorar la transición
 });
+
+
+
+    AOS.init({
+        duration: 1000, // Duración de las animaciones
+        once: true // Animar solo una vez
+    });
