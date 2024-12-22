@@ -34,8 +34,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-    AOS.init({
-        duration: 1000, // Duración de las animaciones
-        once: true // Animar solo una vez
-    });
