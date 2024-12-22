@@ -1,26 +1,26 @@
-/* Contenedor del video */
-.video-container {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Ocupa toda la pantalla */
-  overflow: hidden;
+/* NAVBAR  */
+/* Navbar toggler custom style */
+.navbar-toggler {
+    border: none;
+    position: relative;
 }
 
-/* Estilo del video */
-.video-container video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover; /* Asegura que cubra todo el espacio sin deformarse */
-  z-index: -1; /* Se coloca detrás del contenido */
+.navbar-toggler-icon::after {
+    content: 'X';
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* color: #000; */
+    display: none;
+}
+.navbar-toggler:focus {
+    outline: none; /* Elimina el borde de enfoque */
+    
 }
 
-/* Contenido del header */
-.header-content {
-  z-index: 1; /* Se coloca encima del video */
+.navbar-toggler.collapsed .navbar-toggler-icon::after {
+    display: none;
 }
 
 /* FOOTER  */
