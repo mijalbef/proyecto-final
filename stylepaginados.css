@@ -23,11 +23,32 @@
   z-index: 1; /* Se coloca encima del video */
 }
 
-/* FOOTER */
-.hover-icon:hover {
-  color: #f1b832 !important;
+/* FOOTER  */
+
+/* Línea amarilla antes del logo */
+.yellow-line {
+  height: 4px;  /* Aumentamos el grosor de la línea */
+  background-color: #ffd700; /* Color amarillo */
+  width: 100%;  /* La línea se extiende por todo el ancho */
+  margin: 0 auto; /* Centrado en el contenedor */
 }
 
-.hover-icon {
-  transition: color 0.3s ease-in-out;
+/* Línea amarilla después del contenido */
+.yellow-line.mt-4 {
+  height: 4px;  /* Aumentamos el grosor de la línea */
+  background-color: #ffd700; /* Color amarillo */
+  width: 100%;  /* La línea se extiende por todo el ancho */
+  margin: 0 auto; /* Centrado en el contenedor */
+}
+
+.footer-link {
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #ffd700;
 }
