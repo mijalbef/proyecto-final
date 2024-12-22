@@ -6,6 +6,7 @@
   <title>Video con Filtro y Márgenes</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
   <div class="container my-5">
@@ -40,19 +41,33 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 
-  <!-- TEXTO -->
-  <main id="contenido" class="container my-5" >
 
-    <div class="row">
-      <div class="col-12 col-md-6">
-        <h2 class="display-5 fw-bold">Conociendo a los Hermanos Mingarro</h2>
-        <p class="fs-4">
-          Juan y Alejandro Mingarro, nacidos en España en 1978 y 1981, son hermanos, amigos, ilustradores, artistas, diseñadores tecnológicos aficionados, entusiastas del video, amantes del bocadillo de fuet, conferenciantes y músicos ocasionales. En 2007 fundaron su estudio en Barcelona, donde trabajan con todas estas disciplinas a través de encargos, proyectos personales y exposiciones. Su trabajo ha sido publicado, exhibido y premiado a nivel mundial.
-        </p>
-      </div>
-      <div class="col-12 col-md-6"></div>
+<!-- TEXTO Y MODELO 3D -->
+<main id="contenido" class="container my-5">
+  <div class="row">
+    <!-- Columna del Texto -->
+    <div class="col-12 col-md-6">
+      <h2 class="display-5 fw-bold">Conociendo a los Hermanos Mingarro</h2>
+      <p class="fs-4">
+        Juan y Alejandro Mingarro, nacidos en España en 1978 y 1981, son hermanos, amigos, ilustradores, artistas, diseñadores tecnológicos aficionados, entusiastas del video, amantes del bocadillo de fuet, conferenciantes y músicos ocasionales. En 2007 fundaron su estudio en Barcelona, donde trabajan con todas estas disciplinas a través de encargos, proyectos personales y exposiciones. Su trabajo ha sido publicado, exhibido y premiado a nivel mundial.
+      </p>
     </div>
-  </main>
+
+    <!-- Columna del Modelo 3D -->
+    <div class="col-12 col-md-6 d-flex justify-content-center">
+      <model-viewer 
+        src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" 
+        alt="Modelo de un astronauta" 
+        auto-rotate 
+        camera-controls 
+        shadow-intensity="1" 
+        style="width: 100%; max-width: 400px; height: 400px;">
+      </model-viewer>
+    </div>
+  </div>
+</main>
+
+
 
 
  
@@ -150,7 +165,6 @@
         </div>
       </div>
   
-      <!-- AQUÍ PUEDES SEGUIR AÑADIENDO MÁS IMÁGENES -->
     </div>
   </div>
 
