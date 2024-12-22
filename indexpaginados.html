@@ -3,30 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video en Header</title>
+  <title>Video con Filtro y Márgenes</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="container-fluid p-0 position-relative">
-    <!-- Video que ocupa toda la pantalla -->
-    <div class="video-container">
-        <iframe src="https://www.behance.net/embed/project/114775987?ilo0=1" height="316" width="404" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
-    </div>
-    <!-- Contenido centrado sobre el video -->
-    <div class="header-content text-center text-white position-absolute top-50 start-50 translate-middle">
-      <h1 class="display-3">Bienvenido a Mi Página</h1>
-      <p class="lead">Este es un video responsivo en el header.</p>
-      <a href="#contenido" class="btn btn-primary">Explorar más</a>
-    </div>
-  </header>
+  <div class="container my-5">
+    
+    <!-- VIDEO -->
+    <header class="video-wrapper position-relative overflow-hidden">
+      <div class="video-container">
+        <video autoplay muted loop class="w-100 h-100">
+          <source src="img/VIDEOHEADER1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="header-content text-center position-absolute top-50 start-50 translate-middle">
+        <h1 class="display-3 fw-bold text-white">EL UNIVERSO VISUAL DE LOS HERMANOS MINGARRO</h1>
+        <a href="#contenido" class="btn btn-secondary">Explorar más</a>
+      </div>
+    </header>
+  </div>
 
-  <!-- Sección de contenido -->
-  <main id="contenido" class="container my-5">
-    <h2>Sección de contenido</h2>
-    <p>Aquí puedes agregar el resto del contenido de tu página. El diseño es completamente compatible con Bootstrap.</p>
+
+
+  <!-- TIRA COLABORADORES -->
+
+<div class="container-fluid p-0">
+  <div class="illustration-row d-flex overflow-hidden align-items-center">
+    <img src="https://images.squarespace-cdn.com/content/v1/60742b7e3131937ba17eead8/84100f11-4ab4-4630-b500-4768caaa6904/Line.gif" alt="Ilustración 1" class="flex-shrink-0 img-fluid">
+    <img src="https://images.squarespace-cdn.com/content/v1/60742b7e3131937ba17eead8/84100f11-4ab4-4630-b500-4768caaa6904/Line.gif" alt="Ilustración 2" class="flex-shrink-0 img-fluid">
+    <img src="https://images.squarespace-cdn.com/content/v1/60742b7e3131937ba17eead8/84100f11-4ab4-4630-b500-4768caaa6904/Line.gif" alt="Ilustración 3" class="flex-shrink-0 img-fluid">
+    <img src="https://images.squarespace-cdn.com/content/v1/60742b7e3131937ba17eead8/84100f11-4ab4-4630-b500-4768caaa6904/Line.gif" alt="Ilustración 4" class="flex-shrink-0 img-fluid">
+  </div>
+</div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- TEXTO -->
+  <main id="contenido" class="container my-5" >
+
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <h2 class="display-5 fw-bold">Conociendo a los Hermanos Mingarro</h2>
+        <p class="fs-4">
+          Juan y Alejandro Mingarro, nacidos en España en 1978 y 1981, son hermanos, amigos, ilustradores, artistas, diseñadores tecnológicos aficionados, entusiastas del video, amantes del bocadillo de fuet, conferenciantes y músicos ocasionales. En 2007 fundaron su estudio en Barcelona, donde trabajan con todas estas disciplinas a través de encargos, proyectos personales y exposiciones. Su trabajo ha sido publicado, exhibido y premiado a nivel mundial.
+        </p>
+      </div>
+      <div class="col-12 col-md-6"></div>
+    </div>
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+ 
+
+  <!-- GALERÍA -->
+  <div class="container mt-5">
+    <div class="row gx-3 gy-3">
+      <div class="col-12 col-sm-6 col-md-4">
+        <img src="img/GIF1.gif" class="img-fluid" alt="GIF 1">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <img src="img/GIF2.gif" class="img-fluid" alt="GIF 2">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <img src="img/GIF3.gif" class="img-fluid" alt="GIF 3">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <img src="img/GIF4.gif" class="img-fluid" alt="GIF 4">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <img src="img/GIF5.gif" class="img-fluid" alt="GIF 5">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <img src="img/GIF6.gif" class="img-fluid" alt="GIF 6">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <img src="img/GIF7.gif" class="img-fluid" alt="GIF 7">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <img src="img/GIF8.gif" class="img-fluid" alt="GIF 8">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <img src="img/GIF9.gif" class="img-fluid" alt="GIF 9">
+      </div>
+    </div>
+  </div>
+
+
 </body>
+ 
 </html>

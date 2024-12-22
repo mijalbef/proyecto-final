@@ -1,24 +1,56 @@
-/* Contenedor del video */
-.video-container {
+/* VIDEO */
+
+
+.video-wrapper {
+  margin: 50px; 
+  height: 500px; 
   position: relative;
-  width: 100%;
-  height: 100vh; /* Ocupa toda la pantalla */
-  overflow: hidden;
 }
 
-/* Estilo del video */
+.video-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
 .video-container video {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover; /* Asegura que cubra todo el espacio sin deformarse */
-  z-index: -1; /* Se coloca detrás del contenido */
+  top: -10%; 
+  left: 0;
+  width: 100%;
+  height: 120%; 
+  object-fit: cover; 
 }
 
-/* Contenido del header */
+
 .header-content {
-  z-index: 1; /* Se coloca encima del video */
+  z-index: 2;
+  text-align: center;
 }
+
+/* TIRA ILUSTRACIONES */
+
+.illustration-row {
+  height: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.illustration-row img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.illustration-row::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+/* GALERIA */
+
+img {
+  border-radius: 5px; 
+}
+
