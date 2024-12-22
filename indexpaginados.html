@@ -16,23 +16,23 @@
     <!-- Navbar -->
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">MiWeb</a>
-            <button class="navbar-toggler" type="button" id="hamburgerButton" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <a class="navbar-brand" href="#" style="font-family: 'Montserrat', cursive;">Fresh Frames</a>
+            <button class="navbar-toggler d-flex align-items-center" type="button" id="hamburgerButton" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="hamburger-text" style="font-family: 'Montserrat', cursive; font-size: 1.2rem;">MENÚ</span>
             </button>
-            <div class="collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+            <div id="navbarNav" class="collapse">
+                <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#inicio">Inicio</a>
+                        <a class="nav-link" href="#INICIO">INICIO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#caracteristicas">Características</a>
+                        <a class="nav-link" href="#ARTISTAS">ARTISTAS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#acercade">Acerca de</a>
+                        <a class="nav-link" href="#SOBRE NOSOTROS">ACERCA DE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#mas">Más</a>
+                        <a class="nav-link" href="#CONTACTO">MÁS</a>
                     </li>
                 </ul>
             </div>
@@ -42,86 +42,91 @@
 
 <!-- FOOTER -->
 <footer class="bg-white mt-6 py-4">
-  <div class="container">
-
-    <!-- Línea amarilla encima del logo -->
-    <div class="yellow-line mb-4"></div>
-
-    <div class="row">
-      <div class="col-12 text-center mb-4">
-        <a href="index.html">
-          <img src="media/logo.png" alt="Logo Fresh Frames" class="img-fluid" style="max-width: 250px;">
-        </a>
+    <div class="container">
+  
+      <!-- Línea amarilla encima del logo -->
+      <div class="yellow-line mb-4"></div>
+  
+      <div class="row">
+        <!-- Contenedor con flexbox para centrar el logo -->
+        <div class="col-12 d-flex justify-content-center mb-4">
+          <a href="index.html">
+            <img src="media/logo.png" alt="Logo Fresh Frames" class="img-fluid" style="max-width: 250px;">
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="row">
-        <!-- "Quiénes somos", "Cómo comprar", "Contáctanos" -->
-        <div class="col-md-3">
-            <p class="title mt-4 fw-bold">Quiénes somos</p>
-            <p class="footer-link">Manifiesto</p>
-            <p class="footer-link">Condiciones</p>
-            <p class="footer-link">Política de privacidad</p>
-        </div>
-
-        <div class="col-md-3">
-            <p class="title mt-4 fw-bold">Redes Sociales</p>
-            <p class="footer-link">Instagram</p>
-            <p class="footer-link">LinkedIn</p>
-            <p class="footer-link">Youtube</p>
-        </div>
-
-        <div class="col-md-3">
-            <p class="title mt-4 fw-bold">Contáctanos</p>
-            <p class="footer-link">Atención al cliente</p>
-            <p class="footer-link">Q&A</p>
-            <p class="footer-link">Correo Electrónico</p>
-        </div>
-
-        <!-- Suscripción y botón UNIRME -->
-        <div class="col-md-3">
-            <p class="mt-4">Suscríbete para descubrir nuevos lanzamientos y ofertas exclusivas. 10% de descuento en tu primera compra.</p>
-            <button type="button" class="btn text-warning fw-bold" style="background-color: #000000; border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              UNIRME
-          </button>
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="exampleModalLabel">Gracias por unirte y ser parte del cambio</h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Déjanos tu correo para enterarte de todas las novedades:</p>
-                    <div id="thankYouMessage" class="alert alert-success d-none mt-3" role="alert">
-                        ¡Gracias por unirte!
-                    </div>
-                    <div class="mb-3">
-                        <label for="emailInput" class="form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="emailInput" placeholder="nombre@ejemplo.com">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-dark text-warning fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                      GUARDAR
-                  </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Línea amarilla debajo del contenido -->
-    <div class="yellow-line mt-4 my-5"></div>
-
-    <div class="text-center mt-5">
+  
+      <!-- Otras secciones del footer -->
+      <div class="row">
+          <!-- "Quiénes somos", "Cómo comprar", "Contáctanos" -->
+          <div class="col-md-3">
+              <p class="title mt-4 fw-bold">Quiénes somos</p>
+              <p class="footer-link">Manifiesto</p>
+              <p class="footer-link">Condiciones</p>
+              <p class="footer-link">Política de privacidad</p>
+          </div>
+  
+          <div class="col-md-3">
+              <p class="title mt-4 fw-bold">Redes Sociales</p>
+              <p class="footer-link">Instagram</p>
+              <p class="footer-link">LinkedIn</p>
+              <p class="footer-link">Youtube</p>
+          </div>
+  
+          <div class="col-md-3">
+              <p class="title mt-4 fw-bold">Contáctanos</p>
+              <p class="footer-link">Atención al cliente</p>
+              <p class="footer-link">Q&A</p>
+              <p class="footer-link">Correo Electrónico</p>
+          </div>
+  
+          <!-- Suscripción y botón UNIRME -->
+          <div class="col-md-3">
+              <p class="mt-4">Suscríbete para descubrir nuevos lanzamientos y ofertas exclusivas. 10% de descuento en tu primera compra.</p>
+              <button type="button" class="btn text-warning fw-bold" style="background-color: #000000; border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                UNIRME
+            </button>
+          </div>
+      </div>
+  
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h2 class="modal-title fs-5" id="exampleModalLabel">Gracias por unirte y ser parte del cambio</h2>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <p>Déjanos tu correo para enterarte de todas las novedades:</p>
+                      <div id="thankYouMessage" class="alert alert-success d-none mt-3" role="alert">
+                          ¡Gracias por unirte!
+                      </div>
+                      <div class="mb-3">
+                          <label for="emailInput" class="form-label">Correo Electrónico</label>
+                          <input type="email" class="form-control" id="emailInput" placeholder="nombre@ejemplo.com">
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-dark text-warning fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        GUARDAR
+                    </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <!-- Línea amarilla debajo del contenido -->
+      <div class="yellow-line mt-4 my-5"></div>
+  
+      <!-- Contenedor con flexbox para centrar el texto de copyright -->
+      <div class="text-center mt-3">
         <span class="fw-bold">FRESH FRAMES © 2025</span>
     </div>
-  </div>
-</footer>
+    </div>
+  </footer>
+  
 
  <!-- Bootstrap JS, and jQuery -->
  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
