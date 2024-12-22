@@ -31,7 +31,7 @@ body {
 }
 
 .navbar-brand {
-    color: #ffc107;
+    color: #000000;
 }
 
 /* Menú desplegable */
@@ -315,3 +315,9 @@ h2 {
     /* margin-right: auto; /* Imagen pegada al lado derecho */
     /* margin-left: auto; /* Elimina margen izquierdo */
     /* display: block; */ 
+
+@media (max-width:375px){
+    span {
+        font-size: 3em;
+    }
+}
