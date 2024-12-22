@@ -1,6 +1,6 @@
 /* General styles */
 body {
-    background-color: #000000;
+    background-color: #ffffff;
     font-family: 'Montserrat', sans-serif !important;
     margin: 0;
     padding: 0;
@@ -37,7 +37,7 @@ body {
 /* Menú desplegable */
 #navbarNav {
     text-align: left;
-    background-color: #ffffff;
+    background-color: #000000;
     padding: 50px;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
@@ -83,7 +83,7 @@ body {
 .nav-link {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem !important;
-    color: #000000 !important;
+    color: #ffffff !important;
     margin-bottom: 20px;
     transition: color 0.3s ease;
     text-align: left;
@@ -104,6 +104,18 @@ body {
     margin-top: 15rem !important;
     margin-bottom: 15rem !important;
 
+}
+
+
+/* BOTON */
+
+.text-center {
+    text-align: left !important;
+    color: #ffc107 !important;
+}
+
+.btn-warning {
+    --bs-btn-bg: #f8f9fa;
 }
 
 /* Tipografía principal */
@@ -140,8 +152,8 @@ h2 {
 
 /* Navbar container */
 .bg-light {
-    --bs-bg-opacity: 1;
-    background-color: black !important;
+
+    background-color: rgb(255, 255, 255) !important;
 }
 
 /* CARROUSEL */
@@ -250,9 +262,23 @@ h2 {
 }
 
 
-.text-center {
-    text-align: center !important;
-    color: #ffc107 !important;
+/* BOTTOM */
+.custom-btn {
+    background-color: #ffffff; /* Cambia este color de fondo */
+    border-color: #000;
+    color: #ffffff; /* Color del texto */
+    font-family: 'Montserrat', cursive;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    border: none; /* Sin borde */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #28a745; /* Color al pasar el mouse */
+    color: #000000; /* Cambia el color del texto al hover */
 }
 
 /* Imagen de ancho completo en la parte superior */
