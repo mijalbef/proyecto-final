@@ -200,16 +200,34 @@ footer .d-flex {
 }
 
 footer .yellow-line.mt-4 {
-  margin-bottom: 0 !important; /* Eliminar cualquier margen inferior */
+  margin-bottom: 0 !important; 
 }
 
-/* Eliminamos el margen superior del contenedor de copyright */
+
 footer .text-center.mt-5 {
-  margin-top: 0 !important; /* Eliminamos margen superior completamente */
-  padding-top: 0 !important; /* Eliminamos padding superior */
+  margin-top: 0 !important; 
+  padding-top: 0 !important; 
 }
 
-/* Ajustar el texto del copyright, reduciendo su distancia */
+
 footer .text-center span {
-  margin-top: -5px !important; /* Ajustamos el margen superior del texto para acercarlo más */
+  margin-top: -5px !important; 
+}
+
+/* Efecto hover para el botón UNIRME */
+button.btn.text-warning {
+  transition: transform 0.3s ease-in-out; 
+}
+
+button.btn.text-warning:hover {
+  transform: scale(1.1); 
+}
+
+/* Efecto hover para el botón GUARDAR */
+button.btn.btn-dark.text-warning {
+  transition: transform 0.3s ease-in-out; 
+}
+
+button.btn.btn-dark.text-warning:hover {
+  transform: scale(1.1); 
 }
