@@ -56,7 +56,6 @@ body {
 .navbar-toggler {
     position: fixed;
     top: 10px;
-    right: 10px;
     z-index: 1100;
     color: rgb(255, 191, 0);
     background-color: transparent;
@@ -351,8 +350,9 @@ model-viewer {
 
 @media (max-width:375px){
     span {
-        font-size: 3em;
+        font-size: 1em;
     }
+    
 }
 
 
@@ -368,3 +368,23 @@ model-viewer {
     
     
     }
+
+
+    /* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #fw-bold {
+        font-size: 1rem; /* Tamaño reducido para pantallas pequeñas */
+        line-height: 1.2; /* Ajustar el espacio entre líneas */
+    }
+
+    
+
+}
+
+@media (max-width: 576px) {
+    .typed-text {
+        font-size: 2rem; /* Tamaño aún más pequeño para pantallas muy pequeñas */
+        line-height: 1.3;
+    }
+   
+}
