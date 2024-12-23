@@ -10,14 +10,26 @@
   box-shadow: none !important;  /* Añadido para quitar la sombra al hacer focus */
 }
 
+.hamburger-text {
+  color: #ffc107;  
+  border: none !important;  
+  outline: none !important;
+}
+
+.hamburger-text:focus {
+  outline: none !important;  
+  border: none !important;    
+}
+
+
 .navbar-toggler:focus {
   outline: none !important;
   box-shadow: none !important;
 }
 
 .navbar {
-  border: none !important;  /* Elimina el borde */
-  box-shadow: none !important;  /* Elimina la sombra (si la hubiera) */
+  border: none !important;  
+  box-shadow: none !important;  
 }
 
 .navbar-toggler-icon {
@@ -101,6 +113,7 @@
   margin-bottom: 15rem !important;
 
 }
+
 
 
 /* BOTON */
