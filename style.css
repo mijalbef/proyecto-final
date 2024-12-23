@@ -1,6 +1,6 @@
 /* General styles */
 body {
-    background-color: #ffffff;
+    background-color: #fbf5ed;
     font-family: 'Montserrat', sans-serif !important;
     margin: 0;
     padding: 0;
@@ -8,6 +8,50 @@ body {
     box-sizing: border-box;
 }
 
+.text-white {
+    --bs-text-opacity: 1;
+    color: #000 !important;
+}
+/* Contenedor principal del fondo */
+.bg-image-container {
+    position: relative;
+    height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+    overflow: hidden;
+}
+
+.bg-light {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+
+
+/* Imagen de fondo fija */
+.bg-image {
+    position:absolute;
+    opacity: 60%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('IMG/Añadir\ un\ título.png'); /* Ruta correcta a tu imagen */
+    background-size: cover; /* Asegura que cubra todo el espacio */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+    z-index: -1; /* Envía el fondo detrás del contenido */
+}
+
+/* Contenido encima del fondo */
+.content {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+    padding: 150px 0; /* Ajusta el espacio si es necesario */
+}
+
+
+    .text-warning {
+        --bs-text-opacity: 1;
+        color: #000000 !important;
+    }
 /* Botón hamburguesa */
 .navbar-toggler {
     position: fixed;
@@ -32,6 +76,7 @@ body {
 
 .navbar-brand {
     color: #000000;
+        margin-left: 10px;
 }
 
 /* Menú desplegable */
@@ -82,7 +127,7 @@ body {
 /* Estilo de enlaces en el menú */
 .nav-link {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
     color: #ffffff !important;
     margin-bottom: 20px;
     transition: color 0.3s ease;
@@ -105,6 +150,46 @@ body {
     margin-bottom: 15rem !important;
 
 }
+
+
+/* Elimina cualquier margen o padding en el contenedor de la imagen */
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+/* Asegura que la imagen ocupe el 100% del ancho de la pantalla */
+.container-fluid img {
+    width: 100%; /* Ocupa todo el ancho */
+    height: auto; /* Mantiene las proporciones */
+    display: block; /* Elimina cualquier espacio debajo de la imagen */
+}
+
+/* Efecto AOS (opcional: solo si quieres personalizar más) */
+[data-aos="fade-up"] {
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Ajusta los bordes redondeados si se necesitan */
+.img-fluid {
+    border-radius: 0; /* Sin bordes redondeados */
+}
+
+
+/* Estilo base para los enlaces */
+.texto-colaboracion {
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente si es necesario */
+    color: #000; /* Color base del texto */
+    transition: color 0.3s ease; /* Suaviza la transición del color */
+}
+
+/* Efecto hover en amarillo */
+.texto-colaboracion:hover {
+    color: #ffc107 !important; /* Cambia el color a amarillo */
+}
+
+
+
 
 
 /* BOTON */
@@ -151,22 +236,53 @@ h2 {
 }
 
 /* Navbar container */
-.bg-light {
 
-    background-color: rgb(255, 255, 255) !important;
+/* Estilo inicial de las imágenes en blanco y negro */
+.carousel-item .overlay-container img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
 }
 
-/* CARROUSEL */
-.carousel-inner img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
+/* Efecto al pasar el cursor sobre las imágenes */
+.carousel-item .overlay-container:hover img {
+    filter: grayscale(0%); /* Vuelve a color */
+    transform: scale(1.1); /* Aumenta la escala al 110% */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Añade sombra */
+}
+
+.custom-btn {
+    border: 2px solid #000; /* Borde negro */
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #fff; /* Fondo blanco */
+    color: #000; /* Texto negro */
+}
+
+
+.border {
+     border: none !important; 
 }
 
 /* Estilo para el contenedor */
 .carousel-item .overlay-container {
     position: relative;
     overflow: hidden;
-    border-radius: 15px; /* Mantén bordes redondeados */
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+
+.img-fluid {
+    border-radius: 15px;
 }
 
 /* Estilo para el texto y fondo que aparecerán en hover */
@@ -185,120 +301,37 @@ h2 {
     transition: opacity 0.3s ease-in-out; /* Transición suave */
 }
 
-/* Mostrar overlay en hover */
+/* Mostrar el texto de la superposición al pasar el cursor */
 .carousel-item .overlay-container:hover .overlay {
-    opacity: 1;
+    opacity: 1; /* Muestra el overlay */
 }
 
-/* Estilo para la imagen */
-.carousel-item .overlay-container img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.carousel-item .overlay-container:hover img {
-    transform: scale(1.1); /* Aumenta la escala al 110% */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Añade sombra */
-}
-
-
-.carousel-inner img:hover {
-    transform: scale(1.1); /* Aumenta la escala al 110% */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Añade sombra */
-    border-radius: 15px; /* Mantén los bordes redondeados */
-}
-
-.modal-header {
-    border-bottom: 0;
-}
-
-.modal-body {
-    padding: 0;
-}
-
-/* Bordes redondeados para las imágenes del carrusel */
-.border-image {
-    border-radius: 15px;
-}
-
-.border {
-    border: none !important;
-}
-
-/* Ajustar márgenes */
-.carousel {
-    position: relative;
-    width: 100%; /* Hace que ocupe todo el ancho de la página */
-    padding: 20px 0; /* Añade un espaciado interno para las imágenes */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
-}
-
-.carousel-container {
-    margin: 0 auto;
-    max-width: 90%;
-}
-
-
-/* Eliminar bordes alrededor de las imágenes */
-.carousel-inner img {
-    border: none;
-    box-shadow: none;
-    outline: none;
-}
-
-
-/* Cambiar color de los íconos del botón de navegación del carrusel */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: #000;
-    border-radius: 50%;
-    padding: 10px;
-    opacity: 1;
-}
-
-/* Mantener color al pasar el mouse */
-.carousel-control-prev-icon:hover,
-.carousel-control-next-icon:hover {
-    background-color: #ffc107;
-}
-
-
-/* BOTTOM */
-.custom-btn {
-    background-color: #ffffff; /* Cambia este color de fondo */
-    border-color: #000;
-    color: #ffffff; /* Color del texto */
-    font-family: 'Montserrat', cursive;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 15px 30px;
-    border: none; /* Sin borde */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.custom-btn:hover {
-    background-color: #28a745; /* Color al pasar el mouse */
-    color: #000000; /* Cambia el color del texto al hover */
-}
 
 /* Imagen de ancho completo en la parte superior */
 
 
-/* Nueva Sección: Artistas */
-.artist-images {
-    margin-top: 5rem;
+
+
+/* 3D Section Styles */
+/* 3D Section Styles */
+.three-d-section {
+    margin-top: 50px;
 }
 
-.artist-images img {
-    display: block;
-    object-fit: cover;
-
+model-viewer {
+    border: none;
+    background-color: none;
 }
 
-.image-container-small img {
-    max-width: 70%; /* Imagen más pequeña */
-    
+
+
+
+
+.header-1 {
+    background-color: #e8d5d5;
 }
+
+
 
 
 /* .image-container-left img {
@@ -321,3 +354,17 @@ h2 {
         font-size: 3em;
     }
 }
+
+
+@media (max-width: 414px) {
+
+    .carousel-inner .carousel-item .row .col-md-4 {
+        display: none;
+    }
+    .carousel-inner .carousel-item.active .col-md-4:first-child {
+        display: block;
+    
+    }
+    
+    
+    }
