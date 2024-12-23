@@ -5,7 +5,7 @@
   z-index: 1100;
   color: rgb(255, 191, 0);
   background-color: transparent;
-  border: none;
+  border: none !important;
   outline: none !important;  /* Añadido para quitar el outline */
   box-shadow: none !important;  /* Añadido para quitar la sombra al hacer focus */
 }
@@ -230,6 +230,10 @@ footer .text-center.mt-5 {
 
 footer .text-center span {
   margin-top: -5px !important; 
+}
+
+.modal-title {
+  color: #000000; /* Asegúrate de que el texto sea negro o de otro color visible */
 }
 
 /* Efecto hover para el botón UNIRME */

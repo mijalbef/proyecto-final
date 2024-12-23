@@ -402,6 +402,10 @@ footer .container {
     color: #ffd700 !important; /* Tono amarillo que se usa en las líneas del footer */
 }
 
+.modal-title {
+    color: #000000; /* Asegúrate de que el texto sea negro o de otro color visible */
+}
+
 /* Estilo para los botones "Unirme" y "Guardar" */
 button.btn.text-warning {
     background-color: #000000; /* Fondo negro */
