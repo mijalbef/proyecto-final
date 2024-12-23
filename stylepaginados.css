@@ -1,9 +1,7 @@
-/* NAVBAR  */
 /* Botón hamburguesa */
 .navbar-toggler {
   position: fixed;
   top: 10px;
-  right: 10px;
   z-index: 1100;
   color: rgb(255, 191, 0);
   background-color: transparent;
@@ -23,6 +21,7 @@
 
 .navbar-brand {
   color: #000000;
+      margin-left: 10px;
 }
 
 /* Menú desplegable */
@@ -73,7 +72,7 @@
 /* Estilo de enlaces en el menú */
 .nav-link {
   font-family: 'Montserrat', sans-serif;
-  font-size: 2rem !important;
+  font-size: 1.5rem !important;
   color: #ffffff !important;
   margin-bottom: 20px;
   transition: color 0.3s ease;
@@ -84,6 +83,7 @@
 .nav-link:hover {
   color: #ffc107 !important;
 }
+
 
 /* Contenedor principal */
 .container {

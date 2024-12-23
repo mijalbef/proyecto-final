@@ -1,14 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburgerButton = document.getElementById("hamburgerButton");
-    const mobileMenu = document.getElementById("mobileMenu");
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburgerButton = document.getElementById('hamburgerButton');
+    const navbarNav = document.getElementById('navbarNav');
 
-    if (hamburgerButton && mobileMenu) {
-        hamburgerButton.addEventListener("click", function () {
-            if (mobileMenu.style.display === "block") {
-                mobileMenu.style.display = "none";
-            } else {
-                mobileMenu.style.display = "block";
-            }
-        });
-    }
+    hamburgerButton.addEventListener('click', function () {
+        const isExpanded = hamburgerButton.getAttribute('aria-expanded') === 'true';
+        hamburgerButton.setAttribute('aria-expanded', !isExpanded);
+        navbarNav.classList.toggle('show'); // Agrega o quita la clase 'show'
+    });
 });
