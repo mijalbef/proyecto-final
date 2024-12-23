@@ -257,6 +257,92 @@
 </div>
 
 
+  <!-- FOOTER -->
+  <footer class="bg-light mt-6 py-4">
+    <div class="container">
+  
+      <!-- Línea amarilla encima del logo -->
+      <div class="yellow-line mb-4"></div>
+  
+      <div class="row">
+        <!-- Contenedor con flexbox para centrar el logo -->
+        <div class="col-12 d-flex justify-content-center mb-4">
+          <a href="index.html">
+            <img src="IMG/logo2.png" alt="Logo Fresh Frames" class="img-fluid" style="max-width: 250px;">
+          </a>
+        </div>
+      </div>
+  
+      <!-- Otras secciones del footer -->
+      <div class="row">
+          <!-- "Quiénes somos", "Cómo comprar", "Contáctanos" -->
+          <div class="col-md-3">
+              <p class="title mt-4 fw-bold">Quiénes somos</p>
+              <p class="footer-link">Manifiesto</p>
+              <p class="footer-link">Condiciones</p>
+              <p class="footer-link">Política de privacidad</p>
+          </div>
+  
+          <div class="col-md-3">
+              <p class="title mt-4 fw-bold">Redes Sociales</p>
+              <p class="footer-link">Instagram</p>
+              <p class="footer-link">LinkedIn</p>
+              <p class="footer-link">Youtube</p>
+          </div>
+  
+          <div class="col-md-3">
+              <p class="title mt-4 fw-bold">Contáctanos</p>
+              <p class="footer-link">Atención al cliente</p>
+              <p class="footer-link">Q&A</p>
+              <p class="footer-link">Correo Electrónico</p>
+          </div>
+  
+          <!-- Suscripción y botón UNIRME -->
+          <div class="col-md-3">
+              <p class="mt-4">Suscríbete para descubrir nuevos artistas todas las semanas.</p>
+              <button type="button" class="btn text-warning custom-yellow-text fw-bold" style="background-color: #000000; border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                UNIRME
+            </button>
+          </div>
+      </div>
+  
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h2 class="modal-title fs-5" id="exampleModalLabel">Gracias por unirte y ser parte del cambio</h2>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <p>Déjanos tu correo para enterarte de todas las novedades:</p>
+                      <div id="thankYouMessage" class="alert alert-success d-none mt-3" role="alert">
+                          ¡Gracias por unirte!
+                      </div>
+                      <div class="mb-3">
+                          <label for="emailInput" class="form-label">Correo Electrónico</label>
+                          <input type="email" class="form-control" id="emailInput" placeholder="nombre@ejemplo.com">
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-dark custom-yellow-text text-warning fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        GUARDAR
+                    </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <!-- Línea amarilla debajo del contenido -->
+      <div class="yellow-line mt-4 my-5"></div>
+  
+      <!-- Contenedor con flexbox para centrar el texto de copyright -->
+      <div class="text-center mt-3">
+        <span class="fw-bold">FRESH FRAMES © 2025</span>
+    </div>
+    </div>
+  </footer>
 
 
     <!-- Bootstrap JS -->
