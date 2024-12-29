@@ -330,8 +330,16 @@ model-viewer {
     background-color: #e8d5d5;
 }
 
+.hover-link:hover {
+    color: #ffc107; 
+    text-decoration: underline;
+}
 
 /* FOOTER  */
+
+footer {
+    margin-top: 2rem; 
+}
 
 footer .container {
     display: flex;
