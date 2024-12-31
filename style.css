@@ -15,7 +15,7 @@ body {
 /* Contenedor principal del fondo */
 .bg-image-container {
     position: relative;
-    height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+    height: 100vh; 
     overflow: hidden;
 }
 
@@ -33,18 +33,18 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('IMG/Añadir\ un\ título.png'); /* Ruta correcta a tu imagen */
-    background-size: cover; /* Asegura que cubra todo el espacio */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* No repite la imagen */
-    z-index: -1; /* Envía el fondo detrás del contenido */
+    background-image: url('IMG/Añadir\ un\ título.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    z-index: -1; 
 }
 
 /* Contenido encima del fondo */
 .content {
     position: relative;
-    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
-    padding: 150px 0; /* Ajusta el espacio si es necesario */
+    z-index: 1; 
+    padding: 150px 0; 
 }
 
 
@@ -61,8 +61,8 @@ body {
     color: rgb(255, 191, 0);
     background-color: transparent;
     border: none;
-    outline: none !important;  /* Añadido para quitar el outline */
-    box-shadow: none !important;  /* Añadido para quitar la sombra al hacer focus */
+    outline: none !important; 
+    box-shadow: none !important; 
 }
 
 .navbar-toggler:focus {
@@ -160,32 +160,43 @@ body {
 
 /* Asegura que la imagen ocupe el 100% del ancho de la pantalla */
 .container-fluid img {
-    width: 100%; /* Ocupa todo el ancho */
-    height: auto; /* Mantiene las proporciones */
-    display: block; /* Elimina cualquier espacio debajo de la imagen */
+    width: 100%; 
+    height: auto; 
+    display: block; 
 }
 
-/* Efecto AOS (opcional: solo si quieres personalizar más) */
+/* Efecto AOS */
 [data-aos="fade-up"] {
     transition: transform 1s ease, opacity 1s ease;
 }
 
+[data-aos] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Ajusta los bordes redondeados si se necesitan */
 .img-fluid {
-    border-radius: 0; /* Sin bordes redondeados */
+    border-radius: 0; 
 }
 
 
 /* Estilo base para los enlaces */
 .texto-colaboracion {
-    font-size: 1.5rem; /* Ajusta el tamaño de la fuente si es necesario */
-    color: #000; /* Color base del texto */
-    transition: color 0.3s ease; /* Suaviza la transición del color */
+    font-size: 1.5rem; 
+    color: #000; 
+    transition: color 0.3s ease; 
 }
 
 /* Efecto hover en amarillo */
 .texto-colaboracion:hover {
-    color: #ffc107 !important; /* Cambia el color a amarillo */
+    color: #ffc107 !important;
 }
 
 
@@ -245,15 +256,15 @@ h2 {
 
 /* Efecto al pasar el cursor sobre las imágenes */
 .carousel-item .overlay-container:hover img {
-    filter: grayscale(0%); /* Vuelve a color */
-    transform: scale(1.1); /* Aumenta la escala al 110% */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Añade sombra */
+    filter: grayscale(0%); 
+    transform: scale(1.1); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
 }
 
 .custom-btn {
-    border: 2px solid #000; /* Borde negro */
-    background-color: #000; /* Fondo negro */
-    color: #fff; /* Texto blanco */
+    border: 2px solid #000; 
+    background-color: #000; 
+    color: #fff; 
     padding: 10px 20px;
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
@@ -264,8 +275,8 @@ h2 {
 }
 
 .custom-btn:hover {
-    background-color: #fff; /* Fondo blanco */
-    color: #000; /* Texto negro */
+    background-color: #fff; 
+    color: #000;
 }
 
 
@@ -277,7 +288,7 @@ h2 {
 .carousel-item .overlay-container {
     position: relative;
     overflow: hidden;
-    border-radius: 15px; /* Bordes redondeados */
+    border-radius: 15px; 
 }
 
 
@@ -292,13 +303,13 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con opacidad */
+    background-color: rgba(0, 0, 0, 0.6); 
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0; /* Ocultar por defecto */
-    transition: opacity 0.3s ease-in-out; /* Transición suave */
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out; 
 }
 
 /* Mostrar el texto de la superposición al pasar el cursor */
@@ -310,9 +321,6 @@ h2 {
 /* Imagen de ancho completo en la parte superior */
 
 
-
-
-/* 3D Section Styles */
 /* 3D Section Styles */
 .three-d-section {
     margin-top: 50px;
