@@ -22,46 +22,6 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
-<script>
-
-
-    //Locomotive
-   /* (function () {
-        const locomotiveScroll = new LocomotiveScroll();
-    })();*/
-    const locomotiveScroll = new LocomotiveScroll({
-    el: document.querySelector("[data-scroll-container]"),
-    smooth: true,
-    lerp: 0.1, // Aumenta la velocidad del scroll
-    inertia: 0.5, // Reduce la inercia para detenerse rápidamente
-    smoothMobile: true, // Suavidad en dispositivos móviles
-    direction: "vertical", // Scroll en vertical
-    multiplier: 1.4, // Multiplicador de la velocidad
-    reloadOnContextChange: true, // Recarga al cambiar de contexto
-});
-
-// Actualiza Locomotive Scroll al cargar la página
-window.addEventListener("load", () => {
-    locomotiveScroll.update();
-});
-
-// Ajusta el tamaño correctamente al redimensionar la ventana
-window.addEventListener("resize", () => {
-    locomotiveScroll.update();
-});
-
-// Refresca Locomotive Scroll al cargar contenido adicional
-window.addEventListener('load', () => {
-    locomotiveScroll.update();
-});
-
-// Refresca al cambiar el tamaño de la ventana
-window.addEventListener('resize', () => {
-    locomotiveScroll.update();
-});
-
-
-</script>
 
 </head>
 <!DOCTYPE html>
@@ -138,14 +98,12 @@ window.addEventListener('resize', () => {
 
             
 
-            <!-- Typed.js CDN -->
-            <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-            <script src="script.js"></script>
+       
 
 
 
             <!-- PARRAFO-->
-            <div class="container exhibitions-section py-5">
+            <div class="container exhibitions-section py-5" data-scroll-container>
                 <div class="row">
                     <div class="col-md-12 text-end"> <!-- Cambiado a text-end -->
                         <div class="section-content" data-aos="fade-right">
@@ -300,8 +258,6 @@ window.addEventListener('resize', () => {
         </div>
 
 
-
-
             <!-- Bootstrap JS -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
             <script src="script.js"></script>
@@ -312,16 +268,7 @@ window.addEventListener('resize', () => {
         <!-- AOS JS -->
         <!-- AOS JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-        <script>
-            AOS.init({
-                duration: 1000, // Duración de las animaciones
-                once: true // Animar solo una vez
-            });
-
-
-            // ANIMACION TIT CARROUSEL
-            
-        </script>
+        <script src="locomotive-home.js"></script>
     </div>
 
 
