@@ -13,264 +13,95 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="locomotive-scroll.css">
     <!-- AOS CSS -->
-     
-<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-<!-- 3D LINK -->
- <!-- model-viewer -->
- <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
- <!-- Three.js -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
-
-</head>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FF</title>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <!-- AOS CSS -->
-     
-<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-<!-- 3D LINK -->
- <!-- model-viewer -->
- <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
- <!-- Three.js -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
-
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- 3D & Locomotive -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
 </head>
 <body>
-    <div data-scroll-container>    
-         <!-- Navbar -->
-            <nav class="navbar navbar-light bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#" style="font-family: 'Montserrat', cursive;">FF</a>
-                    <button class="navbar-toggler d-flex align-items-center" type="button" id="hamburgerButton" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="hamburger-text" style="font-family: 'Montserrat', cursive; font-size: 1.2rem;">MENÚ</span>
-                    </button>
-                    <div id="navbarNav" class="collapse">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#INICIO">INICIO</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#ARTISTAS">ARTISTAS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#SOBRE NOSOTROS">ACERCA DE</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#CONTACTO">MÁS</a>
-                            </li>
-                        </ul>
-                    </div>
+    <!-- Main container for Locomotive Scroll -->
+    <main data-scroll-container>
+        <!-- Navbar -->
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#" style="font-family: 'Montserrat', cursive;">FF</a>
+                <button class="navbar-toggler" type="button" id="hamburgerButton">
+                    <span class="hamburger-text" style="font-family: 'Montserrat'; font-size: 1.2rem;">MENÚ</span>
+                </button>
+                <div id="navbarNav" class="collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#artistas">Artistas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#acerca-de">Acerca de</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Más</a></li>
+                    </ul>
                 </div>
-            </nav>
-            <!-- Header Section with Background Image -->
-            <section class="bg-image-container">
-                <div class="bg-image"></div> <!-- Imagen de fondo fija -->
-                <div class="content d-flex align-items-center">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-8 text-white">
-                                <h1 id="typed-text" class="fw-bold" 
-                                    style="font-family: 'Montserrat', cursive; font-size: 6rem; line-height: 1.1;">
-                                    FRESH FRAMES 
-                                </h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            </div>
+        </nav>
 
-
-        
-
-            
-
-       
-
-
-
-            <!-- PARRAFO-->
-            <div class="container exhibitions-section py-5" data-scroll-container>
-                <div class="row">
-                    <div class="col-md-12 text-end"> <!-- Cambiado a text-end -->
-                        <div class="section-content" data-aos="fade-right">
-                            <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; line-height: 1.8; color: #000; text-align: right;"> <!-- Cambiado a text-align: right -->
-                                Donde el arte fresco y las ideas nuevas se encuentran.
-                            </p>
-                            <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; line-height: 1.8; color: #000; text-align: right;"> <!-- Cambiado a text-align: right -->
-                                En Fresh Frames te presentamos a artistas
-                                emergentes que transforman
-                            </p>
-                            
-                            <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; line-height: 1.8; color: #000; text-align: right;"> <!-- Cambiado a text-align: right -->
-                                la escena creativa con estilos únicos y perspectivas que inspiran.
-                            </p>
-                            <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; line-height: 1.8; color: #000; text-align: right;"> <!-- Cambiado a text-align: right -->
-                                Explora sus historias, sus obras y su forma de ver el mundo.
-                            </p>
+        <!-- Header Section -->
+        <section id="inicio" class="bg-image-container" data-scroll-section>
+            <div class="bg-image"></div>
+            <div class="content d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 text-white">
+                            <h1 id="typed-text" class="fw-bold" style="font-family: 'Montserrat'; font-size: 6rem; line-height: 1.1;">
+                                FRESH FRAMES
+                            </h1>
                         </div>
                     </div>
                 </div>
             </div>
-            
+        </section>
 
-        <div data-aos="fade-up"
-        data-aos-duration="1000" class="background-image-section"></div>
-
-
-        <!-- CARROUSEL -->
-        <section class="carrusel">
-
-            <div id="artworkCarousel" class="carousel slide mx-auto p-3 border rounded" data-bs-ride="carousel" style="max-width: 90%;">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="overlay-container">
-                                    <img src="IMG/1.webp" class="d-block w-100 border-image rounded" alt="Artwork 1-1" data-bs-toggle="modal" data-bs-target="#modal1">
-                                    <div class="overlay">Texto 1</div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="overlay-container">
-                                    <img src="IMG/2.webp" class="d-block w-100 border-image rounded" alt="Artwork 1-2" data-bs-toggle="modal" data-bs-target="#modal2">
-                                    <div class="overlay">Texto 2</div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="overlay-container">
-                                    <img src="IMG/3.webp" class="d-block w-100 border-image rounded" alt="Artwork 1-3" data-bs-toggle="modal" data-bs-target="#modal3">
-                                    <div class="overlay">Texto 3</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="overlay-container">
-                                    <img src="IMG/4.webp" class="d-block w-100 border-image rounded" alt="Artwork 2-1" data-bs-toggle="modal" data-bs-target="#modal4">
-                                    <div class="overlay">Texto 4</div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="overlay-container">
-                                    <img src="IMG/5.webp" class="d-block w-100 border-image rounded" alt="Artwork 2-2" data-bs-toggle="modal" data-bs-target="#modal5">
-                                    <div class="overlay">Texto 5</div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="overlay-container">
-                                    <img src="IMG/6.webp" class="d-block w-100 border-image rounded" alt="Artwork 2-3" data-bs-toggle="modal" data-bs-target="#modal6">
-                                    <div class="overlay">Texto 6</div>
-                                </div>
-                            </div>
+        <!-- Párrafo descriptivo -->
+        <section class="exhibitions-section py-5" data-scroll-section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-end">
+                        <div data-aos="fade-right">
+                            <p>Donde el arte fresco y las ideas nuevas se encuentran.</p>
+                            <p>En Fresh Frames te presentamos a artistas emergentes que transforman la escena creativa.</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
+        <!-- Carrusel -->
+        <section id="artistas" class="carrusel" data-scroll-section>
+            <div id="artworkCarousel" class="carousel slide mx-auto p-3 border rounded" data-bs-ride="carousel" style="max-width: 90%;">
+                <div class="carousel-inner">
+                    <!-- Carousel items -->
+                </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#artworkCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#artworkCarousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
                 </button>
             </div>
         </section>
-        <!-- FIN DE CARROUSEL -->
 
+        <!-- Artistas destacados -->
+        <section id="artistas-destacados" class="container mt-5" data-scroll-section>
+            <!-- Contenido de artistas -->
+        </section>
 
-
-
-
-
-        <!-- Título de la sección con animación -->
-        <div class="container text-center my-5" data-aos="fade-up">
-            <h2 class="text-warning" style="font-family: 'Montserrat', sans-serif; font-size: 3rem;">ARTISTAS</h2>
-        </div>
-
-        <!-- NUEVO CARROUSEL -->
-        <div class="container mt-5">
-            <div class="row position-relative">
-                <div class="col-md-6 position-relative d-flex align-items-center" data-aos="fade-right">
-                    <img src="IMG/image 7.webp" class="img-fluid" alt="Bikini colgando">
-                </div>
-
-                <div class="col-md-6 position-relative d-flex align-items-center justify-content-center" data-aos="fade-right">
-                    <div class="text-center">
-                        <a href="brosmind.html" class="texto-colaboracion font-weight-bold text-dark mb-3 text-decoration-none" data-aos="fade-up">BROSMIND</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container mt-5 mb-5">
-            <div class="row position-relative">
-                <div class="col-md-6 text-center" data-aos="fade-right">
-                    <a href="martina-paukova.html" class="texto-colaboracion font-weight-bold text-dark mb-3 text-decoration-none">MARTINA PAUKOVA</a>
-                </div>
-                <div class="col-md-6 position-relative d-flex align-items-center justify-content-center" data-aos="fade-left">
-                    <img src="IMG/image 10.webp" class="img-fluid" alt="Bikini colgando">
-                </div>
-            </div>
-        </div>
-        <div class="container mt-5">
-            <div class="row position-relative">
-                <div class="col-md-6 position-relative d-flex align-items-center" data-aos="fade-right">
-                    <img src="IMG/image 11.webp" class="img-fluid" alt="Bikini colgando">
-                </div>
-
-                <div class="col-md-6 position-relative d-flex align-items-center justify-content-center" data-aos="fade-right">
-                    <div class="text-center">
-                        <a href="brosmind.html" class="texto-colaboracion font-weight-bold text-dark mb-3 text-decoration-none" data-aos="fade-up">JULIAN JULLIEN</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        </div>
-
-
-        <div class="container-fluid mt-5 p-0">
-            <!-- Imagen con efecto fade-up -->
+        <!-- Imagen de cierre -->
+        <section class="container-fluid mt-5 p-0" data-scroll-section>
             <div data-aos="fade-up">
-                <img src="IMG/Copia de Añadir un título 2.png" 
-                    alt="Descripción de la imagen" 
-                    class="w-100 img-fluid" 
-                    style="height: auto;">
+                <img src="IMG/Copia de Añadir un título 2.png" class="w-100 img-fluid">
             </div>
-        </div>
+        </section>
+    </main>
 
-
-            <!-- Bootstrap JS -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-            <script src="script.js"></script>
-        
-        <!-- Typed.js CDN -->
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-        <script src="script.js"></script>
-        <!-- AOS JS -->
-        <!-- AOS JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-        <script src="locomotive-home.js"></script>
-    </div>
-
-
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
