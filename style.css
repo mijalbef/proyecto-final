@@ -1,21 +1,45 @@
-/* General styles */
+/* Essential Locomotive Scroll styles */
+html.has-scroll-smooth {
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+[data-scroll-container] {
+    min-height: 100vh;
+}
+
+[data-scroll-section] {
+    position: relative;
+    width: 100%;
+}
+
+/* Remove any conflicting overflow properties */
+html, body {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Your existing styles */
 body {
     background-color: #fbf5ed;
     font-family: 'Montserrat', sans-serif !important;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 }
 
+/* Text styles */
 .text-white {
     --bs-text-opacity: 1;
     color: #000 !important;
 }
-/* Contenedor principal del fondo */
+
+/* Background image container */
 .bg-image-container {
     position: relative;
-    height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -23,36 +47,34 @@ body {
     background-color: rgba(0, 0, 0, 0) !important;
 }
 
-
-
-/* Imagen de fondo fija */
+/* Background image */
 .bg-image {
-    position:absolute;
+    position: absolute;
     opacity: 60%;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('IMG/Añadir\ un\ título.png'); /* Ruta correcta a tu imagen */
-    background-size: cover; /* Asegura que cubra todo el espacio */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* No repite la imagen */
-    z-index: -1; /* Envía el fondo detrás del contenido */
+    background-image: url('IMG/Añadir\ un\ título.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
 }
 
-/* Contenido encima del fondo */
+/* Content styles */
 .content {
     position: relative;
-    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
-    padding: 150px 0; /* Ajusta el espacio si es necesario */
+    z-index: 1;
+    padding: 150px 0;
 }
 
+.text-warning {
+    --bs-text-opacity: 1;
+    color: #000000 !important;
+}
 
-    .text-warning {
-        --bs-text-opacity: 1;
-        color: #000000 !important;
-    }
-/* Botón hamburguesa */
+/* Navbar styles */
 .navbar-toggler {
     position: fixed;
     top: 10px;
@@ -60,8 +82,8 @@ body {
     color: rgb(255, 191, 0);
     background-color: transparent;
     border: none;
-    outline: none !important;  /* Añadido para quitar el outline */
-    box-shadow: none !important;  /* Añadido para quitar la sombra al hacer focus */
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .navbar-toggler:focus {
@@ -75,10 +97,10 @@ body {
 
 .navbar-brand {
     color: #000000;
-        margin-left: 10px;
+    margin-left: 10px;
 }
 
-/* Menú desplegable */
+/* Menu desplegable */
 #navbarNav {
     text-align: left;
     background-color: #000000;
@@ -104,26 +126,17 @@ body {
 
 #navbarNav.show {
     transform: scaleY(1);
-}
-
-/* Efecto de onda */
-@keyframes waveEffect {
-    0% {
-        transform: scaleY(0.2);
-    }
-    50% {
-        transform: scaleY(1.1);
-    }
-    100% {
-        transform: scaleY(1);
-    }
-}
-
-#navbarNav.show {
     animation: waveEffect 1.0s ease-in-out;
 }
 
-/* Estilo de enlaces en el menú */
+/* Wave effect */
+@keyframes waveEffect {
+    0% { transform: scaleY(0.2); }
+    50% { transform: scaleY(1.1); }
+    100% { transform: scaleY(1); }
+}
+
+/* Nav links */
 .nav-link {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem !important;
@@ -138,7 +151,7 @@ body {
     color: #ffc107 !important;
 }
 
-/* Contenedor principal */
+/* Container styles */
 .container {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -147,348 +160,148 @@ body {
 .mt-5 {
     margin-top: 15rem !important;
     margin-bottom: 15rem !important;
-
 }
 
-
-/* Elimina cualquier margen o padding en el contenedor de la imagen */
+/* Container fluid */
 .container-fluid {
     margin: 0;
     padding: 0;
 }
 
-/* Asegura que la imagen ocupe el 100% del ancho de la pantalla */
 .container-fluid img {
-    width: 100%; /* Ocupa todo el ancho */
-    height: auto; /* Mantiene las proporciones */
-    display: block; /* Elimina cualquier espacio debajo de la imagen */
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* Efecto AOS (opcional: solo si quieres personalizar más) */
+/* Section styles */
+.exhibitions-section {
+    position: relative;
+    z-index: 2;
+    background-color: #fbf5ed;
+    padding: 4rem 0;
+}
+
+/* AOS animations */
 [data-aos="fade-up"] {
     transition: transform 1s ease, opacity 1s ease;
 }
 
-/* Ajusta los bordes redondeados si se necesitan */
-.img-fluid {
-    border-radius: 0; /* Sin bordes redondeados */
-}
-
-
-/* Estilo base para los enlaces */
-.texto-colaboracion {
-    font-size: 1.5rem; /* Ajusta el tamaño de la fuente si es necesario */
-    color: #000; /* Color base del texto */
-    transition: color 0.3s ease; /* Suaviza la transición del color */
-}
-
-/* Efecto hover en amarillo */
-.texto-colaboracion:hover {
-    color: #ffc107 !important; /* Cambia el color a amarillo */
-}
-
-
-
-
-
-/* BOTON */
-
-.text-center {
-    text-align: left !important;
-    color: #ffc107 !important;
-}
-
-.btn-warning {
-    --bs-btn-bg: #f8f9fa;
-}
-
-/* Tipografía principal */
-.display-1 {
-    font-size: 5rem;
-    line-height: 1.2;
-    color: #ffc107;
-    font-family: 'Permanent Marker', cursive;
-}
-
-.display-4 {
-    font-size: 3.5rem;
-    line-height: 1.3;
-    color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* Estilos para el párrafo */
-.lead {
-    font-size: 1.5rem;
-    line-height: 1.8;
-    color: #ffffff;
-}
-
-/* Contenido principal */
-h2 {
-    font-size: 4rem;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-    text-align: left;
-    margin-top: 20px;
-    justify-content: left;
-}
-
-/* Navbar container */
-
-/* Estilo inicial de las imágenes en blanco y negro */
-.carousel-item .overlay-container img {
-    filter: grayscale(100%);
-    transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
-}
-
-/* Efecto al pasar el cursor sobre las imágenes */
-.carousel-item .overlay-container:hover img {
-    filter: grayscale(0%); /* Vuelve a color */
-    transform: scale(1.1); /* Aumenta la escala al 110% */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Añade sombra */
-}
-
-.custom-btn {
-    border: 2px solid #000; /* Borde negro */
-    background-color: #000; /* Fondo negro */
-    color: #fff; /* Texto blanco */
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.custom-btn:hover {
-    background-color: #fff; /* Fondo blanco */
-    color: #000; /* Texto negro */
-}
-
-
-.border {
-     border: none !important; 
-}
-
-/* Estilo para el contenedor */
-.carousel-item .overlay-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px; /* Bordes redondeados */
-}
-
-
+/* Image styles */
 .img-fluid {
     border-radius: 15px;
 }
 
-/* Estilo para el texto y fondo que aparecerán en hover */
+/* Carousel styles */
+.carousel-item .overlay-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.carousel-item .overlay-container img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item .overlay-container:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
 .carousel-item .overlay-container .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con opacidad */
+    background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0; /* Ocultar por defecto */
-    transition: opacity 0.3s ease-in-out; /* Transición suave */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-/* Mostrar el texto de la superposición al pasar el cursor */
 .carousel-item .overlay-container:hover .overlay {
-    opacity: 1; /* Muestra el overlay */
+    opacity: 1;
 }
 
-
-/* Imagen de ancho completo en la parte superior */
-
-
-
-
-/* 3D Section Styles */
-/* 3D Section Styles */
-.three-d-section {
-    margin-top: 50px;
+/* Link styles */
+.texto-colaboracion {
+    font-size: 1.5rem;
+    color: #000;
+    transition: color 0.3s ease;
 }
 
-model-viewer {
-    border: none;
-    background-color: none;
+.texto-colaboracion:hover {
+    color: #ffc107 !important;
 }
 
-
-
-
-
-.header-1 {
-    background-color: #e8d5d5;
-}
-
-.hover-link:hover {
-    color: #ffc107; 
-    text-decoration: underline;
-}
-
-/* FOOTER  */
-
+/* Footer styles */
 footer {
-    margin-top: 2rem; 
+    margin-top: 2rem;
 }
 
-footer .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  footer .row {
+.yellow-line {
+    height: 4px;
+    background-color: #ffd700;
     width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  footer .col-12 {
-    display: flex;
-    justify-content: center;
-  }
-  
-  footer .d-flex {
-    display: flex;
-    justify-content: center;
-  }
-  
-  /* Línea amarilla antes del logo */
-  .yellow-line {
-    height: 4px; 
-    background-color: #ffd700; 
-    width: 100%; 
-    margin: 0 auto; 
-  }
-  
-  /* Línea amarilla después del contenido */
-  .yellow-line.mt-4 {
-    height: 4px;  
-    background-color: #ffd700; 
-    width: 100%;  
     margin: 0 auto;
-  }
-  
-  .footer-link {
+}
+
+.footer-link {
     color: #000000;
     cursor: pointer;
     transition: all 0.3s ease;
-  }
-  
-  .footer-link:hover {
+}
+
+.footer-link:hover {
     font-weight: bold;
     font-size: 1.1em;
     color: #ffd700;
-  }
-  
-  footer .yellow-line.mt-4 {
-    margin-bottom: 0 !important; 
-  }
-  
-  
-  footer .text-center.mt-5 {
-    margin-top: 0 !important; 
-    padding-top: 0 !important; 
-  }
-  
-  
-  footer .text-center span {
-    margin-top: -5px !important; 
-  }
-  
-  .custom-yellow-text {
-    color: #ffd700 !important; /* Tono amarillo que se usa en las líneas del footer */
 }
 
-.modal-title {
-    color: #000000; /* Asegúrate de que el texto sea negro o de otro color visible */
+/* Button styles */
+.custom-yellow-text {
+    color: #ffd700 !important;
 }
 
-/* Estilo para los botones "Unirme" y "Guardar" */
 button.btn.text-warning {
-    background-color: #000000; /* Fondo negro */
-    color: #ffd700; /* Texto amarillo (usando el mismo tono que las líneas del footer) */
-    border: 2px solid #000; /* Borde negro */
-    transition: transform 0.3s ease-in-out; /* Efecto suave al aumentar el tamaño */
+    background-color: #000000;
+    color: #ffd700;
+    border: 2px solid #000;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Efecto hover para el botón "Unirme" */
-button.btn.text-warning:hover {
-    transform: scale(1.1); /* Aumenta el tamaño al 110% */
-    color: #ffd700; /* Mantener el texto amarillo al hacer hover */
-}
-
-/* Efecto hover para el botón "Guardar" */
+button.btn.text-warning:hover,
 button.btn.btn-dark.text-warning:hover {
-    transform: scale(1.1); /* Aumenta el tamaño al 110% */
-    color: #ffd700; /* Mantener el texto amarillo al hacer hover */
+    transform: scale(1.1);
+    color: #ffd700;
 }
 
-
-/* .image-container-left img {
-    max-width: 70%; /* Ajustar tamaño de la imagen */
-    /* margin-right: 0; /* Imagen pegada al lado derecho */
-    /* margin-left: auto; /* Elimina margen izquierdo */
-    /* display: block;
-} */
-
-
-/* .image-container-right img {
-
- max-width: 70%; /* Ajustar tamaño de la imagen */
-    /* margin-right: auto; /* Imagen pegada al lado derecho */
-    /* margin-left: auto; /* Elimina margen izquierdo */
-    /* display: block; */ 
-
-@media (max-width:375px){
-    span {
-        font-size: 1em;
-    }
-    
-}
-
-
-
+/* Media queries */
 @media (max-width: 414px) {
-
     .carousel-inner .carousel-item .row .col-md-4 {
         display: none;
     }
     .carousel-inner .carousel-item.active .col-md-4:first-child {
         display: block;
-    
     }
-    
-    
-    }
+}
 
-
-    /* Media query para pantallas más pequeñas */
 @media (max-width: 768px) {
     #fw-bold {
-        font-size: 1rem; /* Tamaño reducido para pantallas pequeñas */
-        line-height: 1.2; /* Ajustar el espacio entre líneas */
+        font-size: 1rem;
+        line-height: 1.2;
     }
-
-    
-
 }
 
 @media (max-width: 576px) {
     .typed-text {
-        font-size: 2rem; /* Tamaño aún más pequeño para pantallas muy pequeñas */
+        font-size: 2rem;
         line-height: 1.3;
     }
-   
 }
-
