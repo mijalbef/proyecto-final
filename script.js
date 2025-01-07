@@ -28,13 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const options = {
         strings: ["FRESH FRAMES", "TUS NUEVOS", "ARTISTAS FAVORITOS"],
-        typeSpeed: 20, // Aumenta la velocidad de tipeo
-        backSpeed: 30, // Velocidad al borrar
-        backDelay: 300, // Retraso entre cada palabra
-        startDelay: 500, // Retraso inicial de medio segundo
-        loop: false, // No repetir la animación
-        showCursor: true, // Mostrar el cursor durante el efecto
-        cursorChar: "|", // Caracter del cursor (opcional)
+        typeSpeed: 20,
+        backSpeed: 30, 
+        backDelay: 300, 
+        startDelay: 500, 
+        loop: false,
+        showCursor: true, 
+        cursorChar: "|", 
         onComplete: () => {
             // Mantener el texto completo visible
             document.getElementById("typed-text").innerHTML = `
@@ -48,16 +48,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Inicia Typed.js
     setTimeout(() => {
         new Typed("#typed-text", options);
-    }, 300); // Reducción del retraso adicional para una transición más rápida
+    }, 300); 
 });
 
 
 // CTITULO CARROUSEL
 
 AOS.init({
-    duration: 1000, // Duración de la animación en milisegundos
-    easing: 'ease-in-out', // Suavizado
-    once: true // Ejecutar animación solo una vez
+    duration: 1000, 
+    easing: 'ease-in-out', 
+    once: true 
 
 });
 
