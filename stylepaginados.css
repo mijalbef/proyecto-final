@@ -169,6 +169,23 @@ h2 {
   background-color: rgb(255, 255, 255) !important;
 }
 
+.illustration-row {
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  height: 50px; /* Grosor reducido de la tira */
+  overflow-x: auto; /* Permite desplazamiento horizontal */
+  overflow-y: hidden; /* Oculta el desplazamiento vertical */
+  display: flex; /* Flexbox para organizar */
+  justify-content: end; /* Alinea los elementos a la derecha */
+  align-items: center; /* Centra las imágenes verticalmente */
+  gap: 10px; /* Espaciado entre imágenes */
+  padding: 0 15px; /* Espaciado lateral */
+}
+
+.illustration {
+  max-height: 70px; /* Ajusta la altura de las imágenes */
+  height: auto; /* Mantiene proporciones originales */
+}
+
 
 /* FOOTER  */
 
