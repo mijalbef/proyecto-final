@@ -167,6 +167,7 @@ body {
 /* Efecto AOS (opcional: solo si quieres personalizar más) */
 [data-aos="fade-up"] {
     transition: transform 1s ease, opacity 1s ease;
+    overflow: hidden;
 }
 
 /* Ajusta los bordes redondeados si se necesitan */
