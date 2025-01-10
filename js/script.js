@@ -58,6 +58,7 @@ AOS.init({
     duration: 1000, // Duración de la animación en milisegundos
     easing: 'ease-in-out', // Suavizado
     once: true // Ejecutar animación solo una vez
+  
 
 });
 
